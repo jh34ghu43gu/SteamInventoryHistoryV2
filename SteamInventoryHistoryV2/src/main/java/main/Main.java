@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 import org.slf4j.LoggerFactory;
@@ -78,13 +80,77 @@ public class Main {
 				writer.write(s);
 				writer.flush();
 				writer.close();
-				System.out.println("Successfully updated stats.json");
+				System.out.println("Successfully updated stats.json with " + manager.getSize() + " events.");
 			}
 			
+			if(option.equals("view")) {
+				manager.addEvents(HistoryParser.readJsonFile(new File("html/stats.json")));
+				System.out.println("Loaded your events from stats.json");
+			}
+			
+			
+			HashMap<Integer, String> mainOptionsMap = new HashMap<Integer, String>();
+			for(int i = 1; i<= manager.getTypes().size(); i++) {
+				mainOptionsMap.put(i, manager.getTypes().get(i-1));
+			}
+			boolean mainLoop = true;
+			HashMap<Integer, String> optionsMap = new HashMap<Integer, String>();
+			ArrayList<String> optionsList = manager.getOptionsForType("");
+			while(mainLoop) {
+				System.out.println("Select which event type you would like details about: ");
+				Main.printOptionsMap(mainOptionsMap, "");
+				String type = "";
+				while(type.isEmpty()) {
+					String s = in.nextLine();
+					if(Main.isInt(s) && Integer.parseInt(s) <= mainOptionsMap.size()) {
+						type = mainOptionsMap.get(Integer.parseInt(s));
+					}
+				}
+				System.out.println("Selected type: " + type + ". Loading options...");
+				optionsMap.clear();
+				optionsList.clear();
+				optionsList = manager.getOptionsForType(type);
+				for(int i = 1; i <= optionsList.size(); i++) {
+					optionsMap.put(i, optionsList.get(i-1));
+				}
+				System.out.println("What would you like to view?");
+				Main.printOptionsMap(optionsMap, "");
+				String choice = "";
+				while(choice.isEmpty()) {
+					String s = in.nextLine();
+					if(Main.isInt(s) && Integer.parseInt(s) <= optionsMap.size()) {
+						choice = optionsMap.get(Integer.parseInt(s));
+					}
+				}
+				for(String s : manager.getMannUpStats(choice)) {
+					System.out.println(s);
+				}
+				
+				
+				System.out.println("Press enter to continue or enter 'Q' to exit.");
+				if(in.nextLine().equals("Q")) {
+					mainLoop = false;
+				}
+			}
 			in.close();
 		} catch(IOException e) {
 			e.printStackTrace();
 			log.error("Error in main: " + e.getMessage());
+		}
+	}
+	
+	private static boolean isInt(String s) {
+		try {
+			Integer.parseInt(s);
+			return true;
+		} catch(Exception e) {
+			return false;
+		}
+	}
+	
+	private static void printOptionsMap(HashMap<Integer, String> map, String end) {
+		for(int i = 1; i <= map.size(); i++) {
+			System.out.println("[" + i + "] " + map.get(i) + end);
 		}
 	}
 	

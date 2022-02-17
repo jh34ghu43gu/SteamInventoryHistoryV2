@@ -1,6 +1,7 @@
 package model.inventoryEvents;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 import com.google.gson.JsonArray;
@@ -10,12 +11,12 @@ import model.Item;
 
 public class InventoryEvent {
 	
-	protected LocalDate date;
+	protected LocalDateTime date;
 	protected String type;
 	protected ArrayList<Item> itemsGained;
 	protected ArrayList<Item> itemsLost;
 	
-	public InventoryEvent(LocalDate date, String type) {
+	public InventoryEvent(LocalDateTime date, String type) {
 		this.date = date;
 		this.type = type;
 		itemsGained = new ArrayList<Item>();
@@ -62,11 +63,11 @@ public class InventoryEvent {
 		return same;
 	}
 	
-	public LocalDate getDate() {
+	public LocalDateTime getDate() {
 		return date;
 	}
 	
-	public void setDate(LocalDate date) {
+	public void setDate(LocalDateTime date) {
 		this.date = date;
 	}
 	
@@ -104,7 +105,7 @@ public class InventoryEvent {
 	
 	public String toString(String tabs) {
 		String out = tabs + "Type: " + type + "\n"
-				+ tabs + "Date: " + date.toString() + "\n"
+				+ tabs + "Date: " + date.format(DateTimeFormatter.ofPattern("MMM d, yyyy h:mma")) + "\n"
 				+ tabs + "Items Gained: " + itemsGained.size() + " Items Lost: " + itemsLost.size() + "\n";
 		for(Item i : itemsGained) {
 			out += tabs + "\tGained: " + i.toString("\t") + "\n";
@@ -118,7 +119,7 @@ public class InventoryEvent {
 	
 	public JsonObject toJson() {
 		JsonObject event = new JsonObject();
-		event.addProperty("date", date.toString());
+		event.addProperty("date", date.format(DateTimeFormatter.ofPattern("MMM d, yyyy h:mma")));
 		event.addProperty("type", type);
 		JsonArray gain = new JsonArray();
 		for(Item i : itemsGained) {

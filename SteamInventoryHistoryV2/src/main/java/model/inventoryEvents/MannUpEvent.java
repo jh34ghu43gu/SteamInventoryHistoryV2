@@ -1,6 +1,7 @@
 package model.inventoryEvents;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -11,12 +12,12 @@ public class MannUpEvent extends InventoryEvent{
 
 	private String tour;
 	
-	public MannUpEvent(LocalDate date) {
+	public MannUpEvent(LocalDateTime date) {
 		super(date, "Mann Up");
 		tour = "Unknown";
 	}
 	
-	public MannUpEvent(LocalDate date, String tour) {
+	public MannUpEvent(LocalDateTime date, String tour) {
 		super(date, "Mann Up");
 		this.tour = tour;
 	}
@@ -39,7 +40,7 @@ public class MannUpEvent extends InventoryEvent{
 	@Override
 	public String toString(String tabs) {
 		String out = tabs + "Type: " + type + " Tour: " + tour + "\n"
-				+ tabs + "Date: " + date.toString() + "\n"
+				+ tabs + "Date: " + date.format(DateTimeFormatter.ofPattern("MMM d, yyyy h:mma")) + "\n"
 				+ tabs + "Items Gained: " + itemsGained.size() + " Items Lost: " + itemsLost.size() + "\n";
 		for(Item i : itemsGained) {
 			out += tabs + "\tGained: " + i.toString("\t");
@@ -54,7 +55,7 @@ public class MannUpEvent extends InventoryEvent{
 	@Override
 	public JsonObject toJson() {
 		JsonObject event = new JsonObject();
-		event.addProperty("date", date.toString());
+		event.addProperty("date", date.format(DateTimeFormatter.ofPattern("MMM d, yyyy h:mma")));
 		event.addProperty("type", type);
 		event.addProperty("tour", tour);
 		JsonArray gain = new JsonArray();

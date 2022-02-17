@@ -110,6 +110,10 @@ public class Item {
 			return "VALVE";
 		} else if(color.equalsIgnoreCase("Undefined")) {
 			return "Undefined";
+		} else if(color.equalsIgnoreCase("#D2D2D2")) {
+			return "CS:GO";
+		} else if(color.equalsIgnoreCase("#f15840") || color.equalsIgnoreCase("#35a3f1")) {
+			return "RUST";
 		}
 		log.warn("Unknown color code: " + color);
 		return "Unknown";
