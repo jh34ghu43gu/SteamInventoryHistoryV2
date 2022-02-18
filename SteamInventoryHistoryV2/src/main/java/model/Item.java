@@ -208,16 +208,10 @@ public class Item {
 	 */
 	private void isSpecial() {
 		special = "";
-		Long startTime = System.currentTimeMillis();
-		Long time = startTime;
 		InputStream is = Item.class.getClassLoader().getResourceAsStream("specials.json");
 		Gson gson = new Gson();
 		try {
-			JsonObject object = gson.fromJson(new InputStreamReader(is, "UTF-8"), JsonObject.class);
-			
-			//log.debug("Time to load json: " + (System.currentTimeMillis()-time));
-			//time = System.currentTimeMillis();
-			
+			JsonObject object = gson.fromJson(new InputStreamReader(is, "UTF-8"), JsonObject.class);			
 			//Weapon check, all weapons start with The
 			if(itemName.startsWith("The")) {
 				JsonArray weaponArray = object.get("Weapons").getAsJsonArray();
@@ -228,10 +222,6 @@ public class Item {
 					}
 				}
 			}
-			
-			//log.debug("Time to loop weapons: " + (System.currentTimeMillis()-time));
-			//time = System.currentTimeMillis();
-			
 			//RoboHat
 			JsonArray roboHatArray = object.get("RoboHats").getAsJsonArray();
 			for(JsonElement el : roboHatArray) {
@@ -256,10 +246,6 @@ public class Item {
 					return;
 				}
 			}
-			
-			//log.debug("Time to loop paint/robo/tools: " + (System.currentTimeMillis()-time));
-			//time = System.currentTimeMillis();
-			
 			//Hat check is the most expensive do it last
 			JsonArray hatArray = object.get("Hats").getAsJsonArray();
 			for(JsonElement el : hatArray) {
@@ -268,12 +254,8 @@ public class Item {
 					return;
 				}
 			}
-			
-			//log.debug("Time to loop hats: " + (System.currentTimeMillis()-time));
-			//time = System.currentTimeMillis();
 		} catch(IOException e) {
 			e.printStackTrace();
 		}
-		//log.debug("Total time: " + (System.currentTimeMillis()-startTime));
 	}
 }
