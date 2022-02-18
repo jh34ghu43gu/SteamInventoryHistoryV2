@@ -43,7 +43,16 @@ public class HistoryParser {
 			LocalDateTime lastEventUsedDate = null;
 			Elements giftEventCache = new Elements();
 			
+			double progress = 0;
+			int lastProgress = 0;
 			for(Element row : rows) {
+				progress++;
+				double percent = (progress/(double)rows.size())*100.0;
+				if(Math.floor(percent) > lastProgress+4) { //+4 for multiples of 5%
+					System.out.println(Math.floor(percent) + "%..");
+					lastProgress = (int) Math.floor(percent);
+				}
+				
 				boolean errorEvent = false;
 				nullHandleRow = row;
 				String dateString = row.select("div.tradehistory_date").first().text();
@@ -312,7 +321,15 @@ public class HistoryParser {
 		try {
 			FileReader reader = new FileReader(file);
 			JsonArray inventoryEvents = gson.fromJson(reader, JsonObject.class).getAsJsonArray("InventoryEvents");
+			double progress = 0;
+			int lastProgress = 0;
 			for(JsonElement eventElement : inventoryEvents) {
+				progress++;
+				double percent = (progress/(double)inventoryEvents.size())*100.0;
+				if(Math.floor(percent) > lastProgress+4) { //+4 for multiples of 5%
+					System.out.println(Math.floor(percent) + "%..");
+					lastProgress = (int) Math.floor(percent);
+				}
 				InventoryEvent event = new InventoryEvent(
 						LocalDateTime.parse(eventElement.getAsJsonObject().get("date").getAsString(), formatter),
 						eventElement.getAsJsonObject().get("type").getAsString());
@@ -320,9 +337,12 @@ public class HistoryParser {
 					Item item = new Item(
 							itemElement.getAsJsonObject().get("name").getAsString(),
 							itemElement.getAsJsonObject().get("quality").getAsString(),
-							"");
+							"", "");
 					if(itemElement.getAsJsonObject().has("secondaryQuality")) {
 						item.setSecondaryQuality(itemElement.getAsJsonObject().get("secondaryQuality").getAsString());
+					}
+					if(itemElement.getAsJsonObject().has("special")) {
+						item.setSpecial(itemElement.getAsJsonObject().get("special").getAsString());
 					}
 					event.addItemGained(item);
 				}
@@ -330,9 +350,12 @@ public class HistoryParser {
 					Item item = new Item(
 							itemElement.getAsJsonObject().get("name").getAsString(),
 							itemElement.getAsJsonObject().get("quality").getAsString(),
-							"");
+							"", "");
 					if(itemElement.getAsJsonObject().has("secondaryQuality")) {
 						item.setSecondaryQuality(itemElement.getAsJsonObject().get("secondaryQuality").getAsString());
+					}
+					if(itemElement.getAsJsonObject().has("special")) {
+						item.setSpecial(itemElement.getAsJsonObject().get("special").getAsString());
 					}
 					event.addItemLost(item);
 				}

@@ -1,0 +1,1238 @@
+{
+	"Weapons": [{
+		"Name": "Scattergun",
+		"Stock": true,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Force-A-Nature",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Shortstop",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Soda Popper",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Baby Face's Blaster",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Back Scatter",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Pistol",
+		"Stock": true,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Lugermorph",
+		"Stock": false,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "C.A.P.P.E.R",
+		"Stock": false,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Winger",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Pretty Boy's Pocket Pistol",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Flying Guillotine",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Bonk! Atomic Punch",
+		"Stock": false,
+		"Drop": true,
+		"KS": false
+	}, {
+		"Name": "Crit-a-Cola",
+		"Stock": false,
+		"Drop": true,
+		"KS": false
+	}, {
+		"Name": "Mad Milk",
+		"Stock": false,
+		"Drop": true,
+		"KS": false
+	}, {
+		"Name": "Bat",
+		"Stock": true,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Holy Mackerel",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Unarmed Combat",
+		"Stock": false,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Batsaber",
+		"Stock": false,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Sandman",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Candy Cane",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Boston Basher",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Three-Rune Blase",
+		"Stock": false,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Fan O'War",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Atomizer",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Wrap Assassin",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Rocket Launcher",
+		"Stock": true,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Original",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Direct Hit",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Black Box",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Rocket Jumper",
+		"Stock": false,
+		"Drop": true,
+		"KS": false
+	}, {
+		"Name": "Liberty Launcher",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Cow Mangler 5000",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Beggar's Bazooka",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Air Strike",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Shotgun",
+		"Stock": true,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Reserve Shooter",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Buff Banner",
+		"Stock": false,
+		"Drop": true,
+		"KS": false
+	}, {
+		"Name": "Gunboats",
+		"Stock": false,
+		"Drop": true,
+		"KS": false
+	}, {
+		"Name": "Battallion's Backup",
+		"Stock": false,
+		"Drop": true,
+		"KS": false
+	}, {
+		"Name": "Concheror",
+		"Stock": false,
+		"Drop": true,
+		"KS": false
+	}, {
+		"Name": "Mantreads",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Righteous Bison",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "B.A.S.E. Jumper",
+		"Stock": false,
+		"Drop": true,
+		"KS": false
+	}, {
+		"Name": "Panic Attack",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Shovel",
+		"Stock": true,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Equalizer",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Pain Train",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Half-Zatoichi",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Disciplinary Action",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Market Gardener",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Escape Plan",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Flame Thrower",
+		"Stock": true,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Rainblower",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Nostromo Napalmer",
+		"Stock": false,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Backburner",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Degreaser",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Phlogistinator",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Dragon's Fury",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Flare Gun",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Detonator",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Manmelter",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Scorch Shot",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Thermal Thruster",
+		"Stock": false,
+		"Drop": true,
+		"KS": false
+	}, {
+		"Name": "Gas Passer",
+		"Stock": false,
+		"Drop": true,
+		"KS": false
+	}, {
+		"Name": "Fire Axe",
+		"Stock": true,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Lollichop",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Axtinguisher",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Postal Pummeler",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Homewrecker",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Maul",
+		"Stock": false,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Powerjack",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Back Scratcher",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Sharpened Volcano Fragment",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Third Degree",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Neon Annihilator",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Hot Hand",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Grenade Launcher",
+		"Stock": true,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Loch-n-Load",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Ali Baba's Wee Booties",
+		"Stock": false,
+		"Drop": true,
+		"KS": false
+	}, {
+		"Name": "Bootlegger",
+		"Stock": false,
+		"Drop": true,
+		"KS": false
+	}, {
+		"Name": "Loose Cannon",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Iron Bomber",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Stickybomb Launcher",
+		"Stock": true,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Scottish Resistance",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Chargin' Targe'",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Sticky Jumper",
+		"Stock": false,
+		"Drop": true,
+		"KS": false
+	}, {
+		"Name": "Splendid Screen",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Tide Turner",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Quickiebomb Launcher",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Bottle",
+		"Stock": true,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Scottish Handshake",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Eyelander",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Nessie's Nine Iron",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Scotsman's Skullcutter",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Pain Train",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Ullapool Caber",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Claidheamh Mor",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Persian Persuader",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Minigun",
+		"Stock": true,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Iron Curtain",
+		"Stock": false,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Natascha",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Brass Beast",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Tomislav",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Huo-Long Heater",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Family Business",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Sandvich",
+		"Stock": false,
+		"Drop": true,
+		"KS": false
+	}, {
+		"Name": "Dalokohs Bar",
+		"Stock": false,
+		"Drop": true,
+		"KS": false
+	}, {
+		"Name": "Buffalo Steak Sandvich",
+		"Stock": false,
+		"Drop": true,
+		"KS": false
+	}, {
+		"Name": "Second Banana",
+		"Stock": false,
+		"Drop": true,
+		"KS": false
+	}, {
+		"Name": "Fists",
+		"Stock": true,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Apoco-Fists",
+		"Stock": false,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Killing Gloves of Boxing",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Gloves of Running Urgently",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Bread Bite",
+		"Stock": false,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Warrior's Spirit",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Fists of Steel",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Eviction Notice",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Holiday Punch",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Frontier Justice",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Widowmaker",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Pomson 6000",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Rescue Ranger",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Panic Attack",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Wrangler",
+		"Stock": false,
+		"Drop": true,
+		"KS": false
+	}, {
+		"Name": "Short Circuit",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Wrench",
+		"Stock": true,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Gunslinger",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Southern Hospitality",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Jag",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Eureka Effect",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Syringe Gun",
+		"Stock": true,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Blutsauger",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Crusader's Crossbow",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Overdose",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Medi Gun",
+		"Stock": true,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Quick-Fix",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Kritzkrieg",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Vaccinator",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Bonesaw",
+		"Stock": true,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Ubersaw",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Vita-Saw",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Amputator",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Solemn Vow",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Sniper Rifle",
+		"Stock": true,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "AWPer Hand",
+		"Stock": false,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Huntsman",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Fortified Compound",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Sydney Sleeper",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Bazaar Bargain",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Machina",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Shooting Star",
+		"Stock": false,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Hitman's Heatmaker",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Classic",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Submachine Gun",
+		"Stock": true,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Cleaner's Carbine",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Jarate",
+		"Stock": false,
+		"Drop": true,
+		"KS": false
+	}, {
+		"Name": "Razorback",
+		"Stock": false,
+		"Drop": true,
+		"KS": false
+	}, {
+		"Name": "Darwin's Danger Shield",
+		"Stock": false,
+		"Drop": true,
+		"KS": false
+	}, {
+		"Name": "Cozy Camper",
+		"Stock": false,
+		"Drop": true,
+		"KS": false
+	}, {
+		"Name": "Kukri",
+		"Stock": true,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Tribalman's Shiv",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Bushwacka",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Shahanshah",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Revolver",
+		"Stock": true,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Big Kill",
+		"Stock": false,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Ambassador",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "L'Etranger",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Enforcer",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Diamondback",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Knife",
+		"Stock": true,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Sharp Dresser",
+		"Stock": false,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Black Rose",
+		"Stock": false,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Your Eternal Reward",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Wanga Prick",
+		"Stock": false,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Conniver's Kunai",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Big Earner",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Spy-cicle",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Cloak And Dagger",
+		"Stock": false,
+		"Drop": true,
+		"KS": false
+	}, {
+		"Name": "Dead Ringer",
+		"Stock": false,
+		"Drop": true,
+		"KS": false
+	}, {
+		"Name": "Red-Tape Recorder",
+		"Stock": false,
+		"Drop": true,
+		"KS": false
+	}, {
+		"Name": "Frying Pan",
+		"Stock": false,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Conscientious Objector",
+		"Stock": false,
+		"Drop": true,
+		"KS": true
+	}, {
+		"Name": "Freedom Staff",
+		"Stock": false,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Bat Outta Hell",
+		"Stock": false,
+		"Drop": false,
+		"KS": true
+	}, {
+		"Name": "Ham Shank",
+		"Stock": false,
+		"Drop": false,
+		"KS": true
+	}],
+	"RoboHats": [
+		"Robot Running Man",
+		"Tin Pot",
+		"Pyrobotics Pack",
+		"Battery Bandolier",
+		"U-clank-a",
+		"Tin-1000",
+		"Medic Mech-Bag",
+		"Bolted Bushman",
+		"Stealth Steeler"
+	],
+	"Paints": [{
+		"Name": "A Color Similar to Slate",
+		"Drop": false
+	}, {
+		"Name": "A Deep Commitment to Purple",
+		"Drop": true
+	}, {
+		"Name": "A Distinctive Lack of Hue",
+		"Drop": false
+	}, {
+		"Name": "A Mann's Mint",
+		"Drop": false
+	}, {
+		"Name": "After Eight",
+		"Drop": false
+	}, {
+		"Name": "Aged Moustache Grey",
+		"Drop": true
+	}, {
+		"Name": "An Extraordinary Abundance of Tinge",
+		"Drop": false
+	}, {
+		"Name": "Australium Gold",
+		"Drop": true
+	}, {
+		"Name": "Color No. 216-190-216",
+		"Drop": true
+	}, {
+		"Name": "Dark Salmon Injustice",
+		"Drop": false
+	}, {
+		"Name": "Drably Olive",
+		"Drop": false
+	}, {
+		"Name": "Indubitably Green",
+		"Drop": true
+	}, {
+		"Name": "Mann Co. Orange",
+		"Drop": true
+	}, {
+		"Name": "Muskelmannbraun",
+		"Drop": true
+	}, {
+		"Name": "Noble Hatter's Violet",
+		"Drop": true
+	}, {
+		"Name": "Peculiarly Drab Tincture",
+		"Drop": true
+	}, {
+		"Name": "Pink as Hell",
+		"Drop": false
+	}, {
+		"Name": "Radigan Conagher Brown",
+		"Drop": true
+	}, {
+		"Name": "The Bitter Taste of Defeat and Lime",
+		"Drop": false
+	}, {
+		"Name": "The Color of a Gentlemann's Business Pants",
+		"Drop": false
+	}, {
+		"Name": "Ye Olde Rustic Colour",
+		"Drop": true
+	}, {
+		"Name": "Zepheniah's Greed",
+		"Drop": true
+	}, {
+		"Name": "An Air of Debonair",
+		"Drop": false
+	}, {
+		"Name": "Balaclavas Are Forever",
+		"Drop": false
+	}, {
+		"Name": "Cream Spirit",
+		"Drop": false
+	}, {
+		"Name": "Operator's Overalls",
+		"Drop": false
+	}, {
+		"Name": "Team Spirit",
+		"Drop": false
+	}, {
+		"Name": "The Value of Teamwork",
+		"Drop": false
+	}, {
+		"Name": "Waterlogged Lab Coat",
+		"Drop": false
+	}],
+	"Tools": [
+		"Name Tag",
+		"Description Tag",
+		"Decal Tool",
+		"Giftapult"
+	],
+	"Hats": [
+		"Backwards Ballcap",
+		"Baseball Bill's Sports Shine",
+		"Big Elfin Deal",
+		"Bonk Helm",
+		"Bonk Leadwear",
+		"Fed-Fightin' Fedora",
+		"Frickin' Sweet Ninja Hood",
+		"Front Runner",
+		"Greased Lightning",
+		"Half-Pipe Hurdler, Hermes",
+		"Pomade Prince",
+		"Runner's Warm-Up",
+		"Scout Shako",
+		"Troublemaker's Tossle Cap",
+		"Ye Oiled Baker Boy",
+		"Ye Olde Baker Boy",
+		"Caribbean Conqueror",
+		"Cloud Crasher",
+		"Condor Cap",
+		"Conquistador",
+		"Full Metal Drill Hat",
+		"Ground Control",
+		"Helmet Without a Home",
+		"Infernal Impaler",
+		"Lucky Shot",
+		"Rebel Rouser",
+		"Screamin' Eagle",
+		"Slo-Poke",
+		"Soldier's Slope Scopers",
+		"Spook Specs",
+		"Stainless Pot",
+		"Steel Shako",
+		"Tyrant's Helm",
+		"Tyrantium Helmet",
+		"Valley Forge",
+		"War Pig",
+		"Whirly Warrior",
+		"Birdcage",
+		"Bolted Birdcage",
+		"Bone Dome",
+		"Brigade Helm",
+		"Burning Bandana",
+		"Combustible Kabuto",
+		"Electric Escorter",
+		"Employee of the Mmmph",
+		"Firewall Helmet",
+		"Flamboyant Flamenco",
+		"Head Warmer",
+		"Hive Minder",
+		"Hottie's Hoodie",
+		"Little Buddy",
+		"Metal Slug",
+		"Old Guadalajara",
+		"Pampered Pyro",
+		"Plumber's Pipe",
+		"Pyro's Boron Beanie",
+		"Respectless Robo-Glove",
+		"Respectless Rubber Glove",
+		"Smoking Skid Lid",
+		"Sole Mate",
+		"Toy Tailor",
+		"Waxy Wayfinder",
+		"Wraith Wrap",
+		"Allbrero",
+		"Black Watch",
+		"Bolted Bicorne",
+		"Bomber's Bucket Hat",
+		"Broadband Bonnet",
+		"Buccaneer's Bicorne",
+		"Cyborg Stunt Helmet",
+		"FR-0",
+		"Frontier Djustice",
+		"Glasgow Great Helm",
+		"Glengarry Bonnet",
+		"Pirate Bandana",
+		"Prince Tavish's Crown",
+		"Pure Tin Capotain",
+		"Razor Cut",
+		"Scotsman's Stove Pipe",
+		"Stormin' Norman",
+		"Strontium Stove Pipe",
+		"Stylish DeGroot",
+		"Tartan Spartan",
+		"Tartan Tyrolean",
+		"Tavish DeGroot Experience",
+		"Voodoo JuJu (Slight Return)",
+		"Bear Necessities",
+		"Bullet Buzz",
+		"Bunsen Brave",
+		"Eliminators Safeguard",
+		"Fur-lined Fighter",
+		"Gridiron Guardian",
+		"Gym Rat",
+		"Katyusha",
+		"Minnesota Slick",
+		"Officer's Ushanka",
+		"One-Man Army",
+		"Outdoorsman",
+		"Sammy Cap",
+		"Soviet Gentleman",
+		"Tough Guy's Toque",
+		"Trash Man",
+		"Tsarboosh",
+		"Tungsten Toque",
+		"Barnstormer",
+		"Big Country",
+		"Danger",
+		"Data Mining Light",
+		"Engineer's Cap",
+		"Pardner's Pompadour",
+		"Peacenik's Ponytail",
+		"Plug-In Prospector",
+		"Professor's Peculiarity",
+		"Safe'n'Sound",
+		"Texas Slim's Dome Shine",
+		"Texas Ten Gallon",
+		"Texas Tin-Gallon",
+		"Timeless Topper",
+		"Trencher's Topper",
+		"Virtual Reality Headset",
+		"Baron von Havenaplane",
+		"Das Gutenkutteharen",
+		"Das Maddendoktor",
+		"Das Naggenvatcher",
+		"Das Ubersternmann",
+		"Gentleman's Ushanka",
+		"Halogen Head Lamp",
+		"Heer's Helmet",
+		"Mann of Reason",
+		"Nunhood",
+		"Otolaryngologist's Mirror",
+		"Platinum Pickelhaube",
+		"Slick Cut",
+		"Surgeon's Stahlhelm",
+		"Teutonic Toque",
+		"Titanium Tyrolean",
+		"Vintage Tyrolean",
+		"Virus Doctor",
+		"Brim-Full Of Bullets",
+		"Cold Killer",
+		"Fruit Shoot",
+		"Letch's LED",
+		"Liquidator's Lid",
+		"Professional's Panama",
+		"Ritzy Rick's Hair Fixative",
+		"Shooter's Sola Topi",
+		"Shooter's Tin Topi",
+		"Soldered Sensei",
+		"Swagman's Swatter",
+		"Wet Works",
+		"Your Worst Nightmare",
+		"Aviator Assassin",
+		"Backbiter's Billycock",
+		"Base Metal Billycock",
+		"Belgian Detective",
+		"Bootleg Base Metal Billycock",
+		"Counterfeit Billycock",
+		"Escapist, Harmburg",
+		"Hat of Cards",
+		"L'homme Burglerre",
+		"L'Inspecteur",
+		"Napoleon Complex",
+		"Pom-Pommed Provocateur",
+		"Bot Dogger",
+		"Boxcar Bomber",
+		"Brotherhood of Arms",
+		"Brown Bomber",
+		"Coldsnap Cap",
+		"Cotton Head",
+		"Crone's Dome",
+		"Dark Falkirk Helm",
+		"Deep Cover Operator",
+		"Executioner",
+		"Federal Casemaker",
+		"Galvanized Gibus",
+		"Hat With No Name",
+		"Hong Kong Cone",
+		"Hot Dogger",
+		"Human Cannonball",
+		"Killer Exclusive",
+		"Kiss King",
+		"Law",
+		"Merc's Mohawk",
+		"Modest Metal Pile of Scrap",
+		"Modest Pile of Hat",
+		"Neckwear Headwear",
+		"Noble Amassment of Hats",
+		"Noble Nickel Amassment of Hats",
+		"Powdered Practitioner",
+		"Salty Dog",
+		"Tipped Lid",
+		"Tough Stuff Muffs",
+		"Towering Pillar of Hats",
+		"Towering Titanium Pillar of Hats",
+		"Toy Soldier",
+		"Vive La France",
+		"Well-Rounded Rifleman",
+		"Winter Woodsman"
+	]
+}

@@ -1,7 +1,14 @@
 package model;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
 import org.slf4j.LoggerFactory;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import ch.qos.logback.classic.Logger;
@@ -17,6 +24,7 @@ public class Item {
 	private String itemName;
 	private String quality;
 	private String secondaryQuality;
+	private String special;
 	
 	/**
 	 * @param itemName 
@@ -24,6 +32,7 @@ public class Item {
 	 */
 	public Item(String itemName, String color) {
 		this.itemName = itemName;
+		this.isSpecial();
 		quality = colorToQuality(color);
 		if(quality.equals("Unknown")) {
 			log.warn("Item: " + itemName + " has unknown color code: " + color);
@@ -76,9 +85,10 @@ public class Item {
 		}
 	}
 	
-	public Item(String itemName, String quality, String secondaryQuality) {
+	public Item(String itemName, String quality, String secondaryQuality, String special) {
 		super();
 		this.itemName = itemName;
+		this.special = special;
 		this.quality = quality;
 		this.secondaryQuality = secondaryQuality;
 	}
@@ -142,6 +152,7 @@ public class Item {
 
 	public void setItemName(String itemName) {
 		this.itemName = itemName;
+		this.isSpecial();
 	}
 
 	public String getQuality() {
@@ -173,7 +184,96 @@ public class Item {
 		if(!secondaryQuality.isEmpty()) {
 			item.addProperty("secondaryQuality", secondaryQuality);
 		}
+		if(!special.isEmpty()) {
+			item.addProperty("special", special);
+		}
 		return item;
 	}
+	
+	public String getSpecial() {
+		return special;
+	}
+	
+	public void setSpecial(String special) {
+		this.special = special;
+	}
 
+	/**
+	 * Internal method run alongside setting itemName to determine if item is a
+	 * Weapon
+	 * Paint
+	 * Hat
+	 * RoboHat
+	 * Tool
+	 */
+	private void isSpecial() {
+		special = "";
+		Long startTime = System.currentTimeMillis();
+		Long time = startTime;
+		InputStream is = Item.class.getClassLoader().getResourceAsStream("specials.json");
+		Gson gson = new Gson();
+		try {
+			JsonObject object = gson.fromJson(new InputStreamReader(is, "UTF-8"), JsonObject.class);
+			
+			//log.debug("Time to load json: " + (System.currentTimeMillis()-time));
+			//time = System.currentTimeMillis();
+			
+			//Weapon check, all weapons start with The
+			if(itemName.startsWith("The")) {
+				JsonArray weaponArray = object.get("Weapons").getAsJsonArray();
+				for(JsonElement el : weaponArray) {
+					if(itemName.equals("The " + el.getAsJsonObject().get("Name").getAsString())) {
+						special = "Weapon";
+						return;
+					}
+				}
+			}
+			
+			//log.debug("Time to loop weapons: " + (System.currentTimeMillis()-time));
+			//time = System.currentTimeMillis();
+			
+			//RoboHat
+			JsonArray roboHatArray = object.get("RoboHats").getAsJsonArray();
+			for(JsonElement el : roboHatArray) {
+				if(itemName.equals(el.getAsString())) {
+					special = "RoboHat";
+					return;
+				}
+			}
+			//Tool
+			JsonArray toolArray = object.get("Tools").getAsJsonArray();
+			for(JsonElement el : toolArray) {
+				if(itemName.equals(el.getAsString())) {
+					special = "Tool";
+					return;
+				}
+			}
+			//Paint
+			JsonArray paintArray = object.get("Paints").getAsJsonArray();
+			for(JsonElement el : paintArray) {
+				if(itemName.equals(el.getAsJsonObject().get("Name").getAsString())) {
+					special = "Paint";
+					return;
+				}
+			}
+			
+			//log.debug("Time to loop paint/robo/tools: " + (System.currentTimeMillis()-time));
+			//time = System.currentTimeMillis();
+			
+			//Hat check is the most expensive do it last
+			JsonArray hatArray = object.get("Hats").getAsJsonArray();
+			for(JsonElement el : hatArray) {
+				if(itemName.equals(el.getAsString())) {
+					special = "Hat";
+					return;
+				}
+			}
+			
+			//log.debug("Time to loop hats: " + (System.currentTimeMillis()-time));
+			//time = System.currentTimeMillis();
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+		//log.debug("Total time: " + (System.currentTimeMillis()-startTime));
+	}
 }

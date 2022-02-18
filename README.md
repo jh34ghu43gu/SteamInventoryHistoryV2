@@ -22,7 +22,7 @@ This will automatically start pressing the "Load more" button at the bottom of t
 ```
 clearInterval(clear);
 ```
-## DO NOT RESIZE YOUR BROWSER AFTER THE SCRIPT STARTS. THIS INCLUDES CLOSING CONSOLE.
+### DO NOT RESIZE YOUR BROWSER AFTER THE SCRIPT STARTS. THIS INCLUDES CLOSING CONSOLE.
 YOUR BROWSER WILL FREEZE IF YOU HAVE LOADED ENOUGH ROWS AND YOU WILL HAVE TO REPEAT THE PROCESS IF YOU DID NOT SAVE THE PAGE YET.
 
 Note: Read the entire next paragraph before following its instructions.

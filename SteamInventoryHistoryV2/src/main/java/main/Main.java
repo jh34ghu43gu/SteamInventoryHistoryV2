@@ -95,7 +95,7 @@ public class Main {
 			}
 			boolean mainLoop = true;
 			HashMap<Integer, String> optionsMap = new HashMap<Integer, String>();
-			ArrayList<String> optionsList = manager.getOptionsForType("");
+			ArrayList<String> optionsList = new ArrayList<String>();
 			while(mainLoop) {
 				System.out.println("Select which event type you would like details about: ");
 				Main.printOptionsMap(mainOptionsMap, "");
