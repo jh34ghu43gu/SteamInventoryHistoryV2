@@ -3,6 +3,7 @@ package main;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -29,6 +30,7 @@ public class HistoryParser {
 	//private static String[] special_used_items = {"" };
 	
 	public static ArrayList<InventoryEvent> readHtmlFile(File file) {
+		long startTime = System.currentTimeMillis();
 		ArrayList<InventoryEvent> events = new ArrayList<InventoryEvent>();
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM d, yyyy h:mma");
 
@@ -48,9 +50,16 @@ public class HistoryParser {
 			for(Element row : rows) {
 				progress++;
 				double percent = (progress/(double)rows.size())*100.0;
-				if(Math.floor(percent) > lastProgress+4) { //+4 for multiples of 5%
-					System.out.println(Math.floor(percent) + "%..");
+				if(Math.floor(percent) > lastProgress) { 
 					lastProgress = (int) Math.floor(percent);
+					if(lastProgress % 5 == 0) {
+						System.out.print(lastProgress + "%");
+						if(lastProgress == 100) {
+							System.out.println();
+						}
+					} else {
+						System.out.print(".");
+					}
 				}
 				
 				boolean errorEvent = false;
@@ -311,10 +320,13 @@ public class HistoryParser {
 			e.printStackTrace();
 			log.error("Null pointer at row: " + nullHandleRow.toString());
 		}
+		DecimalFormat df = new DecimalFormat("#,###");
+		log.debug("Time taken: " + df.format((System.currentTimeMillis()-startTime)) + "ms");
 		return events;
 	}
 	
 	public static ArrayList<InventoryEvent> readJsonFile(File file) {
+		long startTime = System.currentTimeMillis();
 		ArrayList<InventoryEvent> events = new ArrayList<InventoryEvent>();
 		Gson gson = new Gson();
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM d, yyyy h:mma");
@@ -326,9 +338,16 @@ public class HistoryParser {
 			for(JsonElement eventElement : inventoryEvents) {
 				progress++;
 				double percent = (progress/(double)inventoryEvents.size())*100.0;
-				if(Math.floor(percent) > lastProgress+4) { //+4 for multiples of 5%
-					System.out.println(Math.floor(percent) + "%..");
+				if(Math.floor(percent) > lastProgress) { 
 					lastProgress = (int) Math.floor(percent);
+					if(lastProgress % 5 == 0) {
+						System.out.print(lastProgress + "%");
+						if(lastProgress == 100) {
+							System.out.println();
+						}
+					} else {
+						System.out.print(".");
+					}
 				}
 				InventoryEvent event = new InventoryEvent(
 						LocalDateTime.parse(eventElement.getAsJsonObject().get("date").getAsString(), formatter),
@@ -368,7 +387,8 @@ public class HistoryParser {
 		} catch(IOException e) {
 			e.printStackTrace();
 		}
-		
+		DecimalFormat df = new DecimalFormat("#,###");
+		log.debug("Time taken: " + df.format((System.currentTimeMillis()-startTime)) + "ms");
 		return events;
 	}
 }

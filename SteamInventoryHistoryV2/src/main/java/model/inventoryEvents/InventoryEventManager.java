@@ -158,6 +158,8 @@ public class InventoryEventManager {
 		double weapon = 0;
 		double roboHat = 0;
 		double tool = 0;
+		double hat = 0;
+		double paint = 0;
 		
 		double tours = 0;
 		double ausTours = 0;
@@ -190,6 +192,18 @@ public class InventoryEventManager {
 					continue;
 				}
 				for(Item item : event.getItemsGained()) {
+					if(item.getSpecial().equals("Weapon")) {
+						weapon++;
+					} else if(item.getSpecial().equals("RoboHat")) {
+						roboHat++;
+					} else if(item.getSpecial().equals("Tool")) {
+						tool++;
+					} else if(item.getSpecial().equals("Paint")) {
+						paint++;
+					} else if(item.getSpecial().equals("Hat")) {
+						hat++;
+					}
+					
 					String name = item.getItemName();
 					if(items.containsKey(name)) {
 						items.put(name, items.get(name)+1.0);
@@ -268,7 +282,11 @@ public class InventoryEventManager {
 			out.add("Total australium dropping tours: " + ausTours);
 			out.add("Total australiums: " + aussie + " (" + df.format((aussie/ausTours)*100.0) + "%)");
 			out.add("Total golden frying pans: " + pan + " (" + df.format((pan/ausTours)*100.0) + "%)");
-			//TODO weapons etc...
+			out.add("Total weapons: " + weapon);
+			out.add("Total robot hats: " + roboHat);
+			out.add("Total paints: " + paint);
+			out.add("Total tools: " + tool);
+			out.add("Total regular hats: " + hat);
 			if(os >= 1) {
 				out.add("\tTotal Oil Spill Tours: " + df.format(os) + " (" + df.format((Math.floor(os)/tours)*100.0) + "% of total tours)");
 				out.add("\t\tTotal rust botkillers: " + rust + " (" + df.format((rust/Math.floor(os))*100.0) + "%)");

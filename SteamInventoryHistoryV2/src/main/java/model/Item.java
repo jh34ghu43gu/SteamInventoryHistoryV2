@@ -225,7 +225,7 @@ public class Item {
 			//RoboHat
 			JsonArray roboHatArray = object.get("RoboHats").getAsJsonArray();
 			for(JsonElement el : roboHatArray) {
-				if(itemName.equals(el.getAsString())) {
+				if(itemName.equals("The " + el.getAsString())) {
 					special = "RoboHat";
 					return;
 				}
