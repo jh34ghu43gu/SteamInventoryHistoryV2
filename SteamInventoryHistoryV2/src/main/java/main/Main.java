@@ -49,14 +49,17 @@ public class Main {
 				System.out.println("You appear to be a returning user. You can either:"
 						+ "\n[1] Refresh your json files."
 						+ "\n[2] View your stats."
-						+ "\n[3] Quit.");
+						+ "\n[3] Export to spreadsheet."
+						+ "\n[4] Quit.");
 				String inStr = in.nextLine();
-				while(!inStr.equals("1") && !inStr.equals("2") && !inStr.equals("3")) {
+				while(!inStr.equals("1") && !inStr.equals("2") && !inStr.equals("3") && !inStr.equals("4")) {
 					inStr = in.nextLine();
 				}
 				if(inStr.equals("2")) {
 					option = "view";
 				} else if(inStr.equals("3")) {
+					option = "export";
+				} else if(inStr.equals("4")) {
 					in.close();
 					return;
 				}
@@ -88,6 +91,13 @@ public class Main {
 				System.out.println("Loaded your events from stats.json");
 			}
 			
+			if(option.equals("export")) {
+				manager.addEvents(HistoryParser.readJsonFile(new File("html/stats.json")));
+				System.out.println("Loaded your events from stats.json");
+				System.out.println(manager.exportToSpreadsheet());
+				in.close();
+				return;
+			}
 			
 			HashMap<Integer, String> mainOptionsMap = new HashMap<Integer, String>();
 			for(int i = 1; i<= manager.getTypes().size(); i++) {
@@ -122,7 +132,7 @@ public class Main {
 						choice = optionsMap.get(Integer.parseInt(s));
 					}
 				}
-				for(String s : manager.getMannUpStats(choice)) {
+				for(String s : manager.getStats(type, choice)) {
 					System.out.println(s);
 				}
 				

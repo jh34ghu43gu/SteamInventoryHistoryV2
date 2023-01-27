@@ -122,10 +122,12 @@ public class HistoryParser {
 				} else if(type.equals("Received a gift")) {
 					type = "Gift";
 				} else if(type.equals("Used")) {
-					lastEventUsed = true;
-					lastEventUsedDate = date;
-					lastEventUsedRow = row;
-					continue;
+					if(!lastEventUsed) {
+						lastEventUsed = true;
+						lastEventUsedDate = date;
+						lastEventUsedRow = row;
+						continue;
+					}
 				} else if(type.equals("Completed a Contract")) {
 					type = "Contract";
 				} else if(type.equals("Halloween transmute performed")) {
@@ -388,7 +390,7 @@ public class HistoryParser {
 			e.printStackTrace();
 		}
 		DecimalFormat df = new DecimalFormat("#,###");
-		log.debug("Time taken: " + df.format((System.currentTimeMillis()-startTime)) + "ms");
+		log.debug("Reading InventoryEvents from json took: " + df.format((System.currentTimeMillis()-startTime)) + "ms");
 		return events;
 	}
 }

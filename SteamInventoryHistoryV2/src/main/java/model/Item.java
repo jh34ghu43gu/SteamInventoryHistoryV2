@@ -3,6 +3,7 @@ package model;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Comparator;
 
 import org.slf4j.LoggerFactory;
 
@@ -13,7 +14,7 @@ import com.google.gson.JsonObject;
 
 import ch.qos.logback.classic.Logger;
 
-public class Item {
+public class Item implements Comparator<Item>{
 	
 	private static final Logger log = (Logger) LoggerFactory.getLogger(Item.class);
 	
@@ -211,24 +212,33 @@ public class Item {
 		InputStream is = Item.class.getClassLoader().getResourceAsStream("specials.json");
 		Gson gson = new Gson();
 		try {
-			JsonObject object = gson.fromJson(new InputStreamReader(is, "UTF-8"), JsonObject.class);			
-			//Weapon check, all weapons start with The
-			if(itemName.startsWith("The")) {
-				JsonArray weaponArray = object.get("Weapons").getAsJsonArray();
-				for(JsonElement el : weaponArray) {
-					if(itemName.equals("The " + el.getAsJsonObject().get("Name").getAsString())) {
-						special = "Weapon";
-						return;
-					}
+			JsonObject object = gson.fromJson(new InputStreamReader(is, "UTF-8"), JsonObject.class);
+			//Weapons
+			JsonArray weaponArray = object.get("Weapons").getAsJsonArray();
+			for(JsonElement el : weaponArray) {
+				if(itemName.equals("The " + el.getAsJsonObject().get("Name").getAsString()) 
+						|| itemName.equals(el.getAsJsonObject().get("Name").getAsString())) {
+					special = "Weapon";
+					return;
 				}
+			}
+			if(itemName.equals("The Claidheamh Mòr")) {
+				special = "Weapon";
+				return;
 			}
 			//RoboHat
 			JsonArray roboHatArray = object.get("RoboHats").getAsJsonArray();
 			for(JsonElement el : roboHatArray) {
-				if(itemName.equals("The " + el.getAsString())) {
+				if(itemName.equals("The " + el.getAsString())
+						|| itemName.equals(el.getAsString())) {
 					special = "RoboHat";
 					return;
 				}
+			}
+			//RoBRO 3000
+			if(itemName.equals("The RoBro 3000")) {
+				special = "Robro";
+				return;
 			}
 			//Tool
 			JsonArray toolArray = object.get("Tools").getAsJsonArray();
@@ -249,13 +259,41 @@ public class Item {
 			//Hat check is the most expensive do it last
 			JsonArray hatArray = object.get("Hats").getAsJsonArray();
 			for(JsonElement el : hatArray) {
-				if(itemName.equals(el.getAsString())) {
+				if(itemName.equals("The " + el.getAsString())
+						|| itemName.equals(el.getAsString())) {
 					special = "Hat";
 					return;
 				}
 			}
 		} catch(IOException e) {
 			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public int compare(Item item1, Item item2) {
+		if(item1.getQuality().equals(item2.getQuality())) {
+			if(item1.getSecondaryQuality().equals(item2.getSecondaryQuality())) {
+				return item1.getItemName().compareTo(item2.getItemName());
+			} else if(item1.getSecondaryQuality().isEmpty()) {
+				return -1;
+			} else {
+				return 1;
+			}
+		} else {
+			String[] qualities = {"Normal", "Unique", "Decorated Weapon", "Vintage", "Genuine", "Haunted", "Strange", "Collector's", "Unusual"};
+			int q1 = -1;
+			int q2 = -1;
+			for(int i = 0; i < qualities.length; i++) {
+				if(item1.getQuality().equals(qualities[i])) {
+					q1 = i;
+				}
+				if(item2.getQuality().equals(qualities[i])) {
+					q2 = i;
+				}
+			}
+			//LJ did not approve of this
+			return q1 > q2 ? 1 : (q1 == q2 ? 0 : -1);
 		}
 	}
 }
